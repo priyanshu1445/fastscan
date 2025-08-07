@@ -191,12 +191,13 @@ const Standees = () => {
           Connect with us today to get your Smart Standee and stand out from the
           crowd.
         </p>
-     <a 
-  href="/contact" 
+   <a
+  href="tel:+917240009996"
   className="mt-8 inline-block px-10 py-4 bg-white text-[#090040] font-semibold text-lg rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition"
 >
-  Contact Us
+Contact us
 </a>
+
 
       </section>
 

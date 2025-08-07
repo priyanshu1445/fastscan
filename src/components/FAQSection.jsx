@@ -45,7 +45,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="w-full py-16 px-4 bg-gray-50">
+    <section className="w-full py-16 px-4 bg-gray-50" id="faq">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
         <h2 className="text-3xl md:text-5xl font-bold text-center text-[#090040] mb-12">

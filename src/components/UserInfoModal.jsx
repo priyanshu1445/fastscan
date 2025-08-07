@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom"; // ✅ Import this
 import "../index.css";
 
 const UserInfoModal = () => {
+  const location = useLocation(); // ✅ Get current path
   const [show, setShow] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShow(true); // show modal after 2 seconds
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, []);
+    if (location.pathname === "/") {
+      const timer = setTimeout(() => {
+        setShow(true); // show modal after 1.5s only on homepage
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,12 +22,11 @@ const UserInfoModal = () => {
     setShow(false);
   };
 
-  if (!show) return null;
+  if (!show || location.pathname !== "/") return null; // ✅ only show on home
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/20 backdrop-blur-sm">
       <div className="bg-white rounded-lg shadow-lg p-6 w-96 relative transform animate-slideDownSlow">
-        {/* Close Button */}
         <button
           className="absolute top-2 right-2 text-gray-600 hover:text-black"
           onClick={() => setShow(false)}

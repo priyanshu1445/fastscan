@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaPhone, FaEnvelope, FaWhatsapp, FaCommentDots } from "react-icons/fa";
-
+import { FaPhone, FaEnvelope, FaWhatsapp, FaCommentDots, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 const FloatingContactMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
@@ -9,7 +9,6 @@ const FloatingContactMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Close the menu if user clicks outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -25,23 +24,25 @@ const FloatingContactMenu = () => {
       ref={menuRef}
       className="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-2"
     >
-      {/* Contact Options (Visible When Open) */}
       {isOpen && (
         <div className="flex flex-col items-end space-y-2 animate-slide-up">
+        <a
+  href="tel:+917240009996"
+  className="flex items-center gap-2 bg-white border border-gray-200 text-gray-800 font-medium px-5 py-2 rounded-full shadow-sm hover:bg-gray-100 hover:shadow-md transition duration-200"
+>
+  <FaPhoneAlt className="text-primary" />
+  +91 72400 09996
+</a>
           <a
-            href="tel:+1234567890"
+            href="mailto:hello@fastscan.in"
             className="bg-white shadow-md px-4 py-2 rounded-full flex items-center text-black hover:bg-gray-100 transition"
           >
-            <FaPhone className="mr-2" /> Call Us
+            <FaEnvelope className="mr-2" /> hello@fastscan.in
           </a>
-          <a
-            href="mailto:info@example.com"
-            className="bg-white shadow-md px-4 py-2 rounded-full flex items-center text-black hover:bg-gray-100 transition"
-          >
-            <FaEnvelope className="mr-2" /> Email
-          </a>
-          <a
-            href="https://wa.me/1234567890"
+         
+        
+           <a
+            href="https://wa.me/917240009996"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-500 text-white px-4 py-2 rounded-full flex items-center hover:bg-green-600 transition"
@@ -51,10 +52,9 @@ const FloatingContactMenu = () => {
         </div>
       )}
 
-      {/* Main Floating Button */}
       <button
         onClick={toggleMenu}
-        className="bg-blue-800 text-white p-4 rounded-full shadow-lg hover:bg-opacity-90 transition"
+        className="bg-[#090040] text-white p-4 rounded-full shadow-lg hover:bg-opacity-90 transition"
       >
         <FaCommentDots size={24} />
       </button>

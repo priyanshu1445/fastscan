@@ -170,12 +170,13 @@ const Keychain = () => {
         <p className="text-lg text-gray-300 max-w-2xl mx-auto">
           Tap into the future of digital sharing. Get your NFC-enabled keychain today!
         </p>
-        <a
-          href="/contact"
-          className="mt-8 inline-block px-10 py-4 bg-white text-[#090040] font-semibold text-lg rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition"
-        >
-          Contact Us
-        </a>
+       <a
+  href="tel:+917240009996"
+  className="mt-8 inline-block px-10 py-4 bg-white text-[#090040] font-semibold text-lg rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition"
+>
+ Contact us
+</a>
+
       </section>
 
       <Footer />

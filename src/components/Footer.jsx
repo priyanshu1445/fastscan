@@ -36,16 +36,20 @@ const Footer = () => {
           <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-3">
             <li>
-              <Link to="/" className="hover:text-[#4F9DFF] transition">Home</Link>
+              <a href="/" className="hover:text-[#4F9DFF] transition">Home</a>
+
             </li>
             <li>
-              <Link to="/products" className="hover:text-[#4F9DFF] transition">Products</Link>
+            <a href="#products" className="hover:text-[#4F9DFF] transition">Products</a>
+
             </li>
             <li>
-              <Link to="/contact" className="hover:text-[#4F9DFF] transition">Contact</Link>
+           <a href="#contact" className="hover:text-[#4F9DFF] transition">Contact</a>
+
             </li>
             <li>
-              <Link to="/about" className="hover:text-[#4F9DFF] transition">About Us</Link>
+          <a href="#about" className="hover:text-[#4F9DFF] transition">About Us</a>
+
             </li>
           </ul>
         </div>
@@ -55,10 +59,12 @@ const Footer = () => {
           <h4 className="text-xl font-semibold mb-4">Resources</h4>
           <ul className="space-y-3">
             <li>
-              <Link to="/blog" className="hover:text-[#4F9DFF] transition">Blog</Link>
+              <a href="#blog" className="hover:text-[#4F9DFF] transition">Blog</a>
+
             </li>
             <li>
-              <Link to="/faqs" className="hover:text-[#4F9DFF] transition">FAQs</Link>
+              <a href="#faq" className="hover:text-[#4F9DFF] transition">FAQs</a>
+
             </li>
             <li>
               <Link to="/privacy-policy" className="hover:text-[#4F9DFF] transition">Privacy Policy</Link>
@@ -70,17 +76,39 @@ const Footer = () => {
         </div>
 
         {/* Contact */}
-        <div>
-          <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
-          <div className="flex items-center space-x-3 mb-3">
-            <MdEmail className="text-[#4F9DFF] text-xl" />
-            <span>support@fastScan.com</span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <MdPhone className="text-[#4F9DFF] text-xl" />
-            <span>+91 98765 43210</span>
-          </div>
-        </div>
+        {/* Contact */}
+<div>
+  <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
+
+  <div className="flex items-center space-x-3 mb-3">
+    <MdEmail className="text-[#4F9DFF] text-xl" />
+    <a href="mailto:hello@fastscan.in" className="hover:text-[#4F9DFF] transition">
+      hello@fastscan.in
+    </a>
+  </div>
+
+  <div className="flex items-center space-x-3 mb-3">
+    <MdPhone className="text-[#4F9DFF] text-xl" />
+    <a href="tel:+917240009996" className="hover:text-[#4F9DFF] transition">
+      +91 72400 09996
+    </a>
+  </div>
+
+  <div className="flex items-start space-x-3">
+    <svg className="text-[#4F9DFF] w-5 h-5 mt-1" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M10 0C6.134 0 3 3.134 3 7c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 9.5A2.5 2.5 0 1 1 10 4.5a2.5 2.5 0 0 1 0 5z" />
+    </svg>
+    <a
+      href="https://www.google.com/maps/place/154+Krishna+Sarovar,+Mansarovar,+Jaipur"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-[#4F9DFF] transition"
+    >
+      154 Krishna Sarovar, Mansarovar, Jaipur
+    </a>
+  </div>
+</div>
+
       </div>
 
       {/* Bottom Footer */}
