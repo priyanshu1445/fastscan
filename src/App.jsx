@@ -5,6 +5,7 @@ import Standees from "./pages/Standees";
 import Keychain from "./pages/Keychain";
 import ScrollToTop from "./components/ScrollToTop";
 import UserInfoModal from "./components/UserInfoModal";
+import FloatingContactMenu from "./components/FloatingContactMenu";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/products/standees" element={<Standees />} />
         <Route path="/products/keychains" element={<Keychain />} />
       </Routes>
+      <FloatingContactMenu/>
     </Router>
   );
 };

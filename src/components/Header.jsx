@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import { 
-  FaFacebookF, 
-  FaInstagram, 
-  FaLinkedinIn, 
-  FaPhoneAlt, 
-  FaEnvelope, 
-  FaBars, 
-  FaTimes 
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
-import logo from '../assets/logo.png'; // Adjust the path as necessary
+import logo from "../assets/logo.png";
+import AuthModal from "./AuthModal";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   return (
     <header className="fixed w-full z-50 top-0">
@@ -43,20 +45,22 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <img 
-                src={logo} 
-                alt="Logo" 
-                className="h-8 w-auto object-contain" 
-              />
+              <img src={logo} alt="Logo" className="h-8 w-auto object-contain" />
             </div>
 
             {/* Desktop Menu */}
-            <ul className="hidden md:flex gap-8 text-lg text-gray-700 font-medium">
-              <li><a href="/" className="hover:text-blue-600">Home</a></li>
-              <li><a href="#" className="hover:text-blue-600">About</a></li>
-              <li><a href="#" className="hover:text-blue-600">Services</a></li>
-              <li><a href="#" className="hover:text-blue-600">Contact</a></li>
-            </ul>
+            <div className="hidden md:flex items-center gap-8 text-lg text-gray-700 font-medium">
+              <a href="/" className="hover:text-blue-600">Home</a>
+              <a href="#about" className="hover:text-blue-600">About</a>
+              <a href="#products" className="hover:text-blue-600">Products</a>
+              <a href="#contact" className="hover:text-blue-600">Contact</a>
+              <button
+                onClick={() => setShowAuthModal(true)}
+                className="ml-4 px-4 py-1.5 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+              >
+                Login / Signup
+              </button>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -67,21 +71,31 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Mobile Menu with Slide Down Animation */}
-          <div
-            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-            }`}
-          >
+          {/* Mobile Menu */}
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
             <ul className="flex flex-col gap-4 py-4 text-gray-700 font-medium">
-              <li><a href="#" className="hover:text-blue-600">Home</a></li>
-              <li><a href="#" className="hover:text-blue-600">About</a></li>
-              <li><a href="#" className="hover:text-blue-600">Services</a></li>
-              <li><a href="#" className="hover:text-blue-600">Contact</a></li>
+              <li><a href="/" className="hover:text-blue-600">Home</a></li>
+              <li><a href="#about" className="hover:text-blue-600">About</a></li>
+              <li><a href="#products" className="hover:text-blue-600">Products</a></li>
+              <li><a href="contact" className="hover:text-blue-600">Contact</a></li>
+              <li>
+                <button
+                  onClick={() => {
+                    setShowAuthModal(true);
+                    setIsOpen(false); // close mobile menu
+                  }}
+                  className="text-left hover:text-blue-600"
+                >
+                  Login / Signup
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
+
+      {/* Auth Modal */}
+      <AuthModal show={showAuthModal} onClose={() => setShowAuthModal(false)} />
     </header>
   );
 };

@@ -4,7 +4,7 @@ import mobileAnimation from "../assets/Mobile.json"; // replace with your Lottie
 
 const MobileSection = () => {
   return (
-    <section className="w-full  bg-white flex items-center px-4 py-5 ">
+    <section className="w-full  bg-white flex items-center px-4 py-8 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Column: Lottie Animation */}
         <div className="flex justify-center">

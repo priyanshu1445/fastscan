@@ -25,7 +25,7 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <div className="bg-gray-900 py-16">
+    <div className="bg-gray-900 py-16" id="products">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-2xl sm:text-5xl font-bold text-center mb-12 text-white">
           Our Smart Products
