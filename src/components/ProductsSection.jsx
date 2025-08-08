@@ -1,8 +1,8 @@
 // pages/ProductsSection.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import StandeeImg from "../assets/standee.png";
-import KeychainImg from "../assets/keychain1.png";
+import StandeeImg from "../assets/standeehero.png";
+import KeychainImg from "../assets/keychainp.png";
 
 const products = [
   {
@@ -56,12 +56,12 @@ const ProductsSection = () => {
             >
               <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[#305077] to-[#090040] blur-md"></span>
 
-              <div className="relative p-6">
+              <div className="relative p-6 ">
                 <div className="relative overflow-hidden rounded-lg">
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-80 object-contain transform group-hover:scale-105 transition duration-500 bg-white p-4 rounded-md"
+                    className="w-full  object-contain transform group-hover:scale-105 transition duration-500 bg-white p-4 rounded-md"
                   />
                 </div>
 

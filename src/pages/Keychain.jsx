@@ -6,7 +6,8 @@ import {
   FaLink,
   FaQuoteLeft,
 } from "react-icons/fa";
-import keychainImg from "../assets/1.png";
+import keychainImg from "../assets/keychainp.png";
+import keychainAboutImg from "../assets/5.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -94,9 +95,9 @@ const Keychain = () => {
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center text-white">
           <img
-            src={keychainImg}
+            src={keychainAboutImg}
             alt="Keychain Display"
-            className="rounded-xl shadow-xl hover:scale-105 transition-transform w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
+            className="rounded-xl w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
           />
           <div>
             <h2 className="text-3xl font-bold mb-6">Why Choose NFC Keychains?</h2>

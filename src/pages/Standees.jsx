@@ -7,7 +7,8 @@ import {
   FaBolt,
   FaQuoteLeft,
 } from "react-icons/fa";
-import standeeImg from "../assets/2.png";
+import standeeImg from "../assets/standeeherop.png";
+import whychooseImg from "../assets/pc2.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -68,9 +69,9 @@ const Standees = () => {
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center ">
           <img
-            src={standeeImg}
+            src={whychooseImg}
             alt="Standee Display"
-            className="rounded-xl shadow-xl hover:scale-105 transition-transform"
+            className="rounded-xl w-90 "
           />
           <div>
             <h2 className="text-3xl font-bold mb-6">Why Choose Our Smart Standee?</h2>
@@ -149,7 +150,7 @@ const Standees = () => {
           Our Smart Standee delivers an unmatched brand experience. Watch how it
           elevates marketing and creates an unforgettable impression.
         </p>
-        <div className="rounded-xl overflow-hidden shadow-2xl max-w-5xl mx-auto">
+        <div className="rounded-xl overflow-hidden shadow-2xl max-w-3xl mx-auto">
           <img src={standeeImg} alt="Standee Demo" className="w-full" />
         </div>
       </section>
