@@ -4,6 +4,10 @@ import { MdEmail, MdPhone } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+    const downloadApp = () => {
+    window.open("https://your-app-download-link.com", "_blank");
+  };
   return (
     <footer className="w-full bg-[#090040] text-white py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -14,6 +18,7 @@ const Footer = () => {
           <p className="text-gray-300 mb-6">
             Smart NFC solutions for standees and keychains, connecting you to the future of seamless digital interaction.
           </p>
+       
           {/* Social Icons */}
           <div className="flex space-x-4">
             <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition">
@@ -29,30 +34,38 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
           </div>
+
+             <div className="mt-6">
+              <button
+                onClick={downloadApp}
+                className="ml-4 px-4 py-1.5 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
+              >
+                Download App
+              </button>
+             </div>
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
-          <ul className="space-y-3">
-            <li>
-              <a href="/" className="hover:text-[#4F9DFF] transition">Home</a>
+       {/* Quick Links */}
+<div>
+  <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
+  <ul className="space-y-3">
+  
+    <li>
+      <Link to="/products/standees" className="hover:text-[#4F9DFF] transition">NFC Standee</Link>
+    </li>
+    <li>
+      <Link to="/products/keychains" className="hover:text-[#4F9DFF] transition">Smart Keychain</Link>
+    </li>
+    <li>
+      <Link to="/schedule-demo" className="hover:text-[#4F9DFF] transition">Schedule Demo</Link>
+    </li>
+    <li>
+      <Link to="/support" className="hover:text-[#4F9DFF] transition">Support</Link>
+    </li>
+  </ul>
+</div>
 
-            </li>
-            <li>
-            <a href="#products" className="hover:text-[#4F9DFF] transition">Products</a>
-
-            </li>
-            <li>
-           <a href="#contact" className="hover:text-[#4F9DFF] transition">Contact</a>
-
-            </li>
-            <li>
-          <a href="#about" className="hover:text-[#4F9DFF] transition">About Us</a>
-
-            </li>
-          </ul>
-        </div>
 
         {/* Resources */}
         <div>

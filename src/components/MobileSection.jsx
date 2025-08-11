@@ -1,32 +1,70 @@
 import React from "react";
 import Lottie from "lottie-react";
-import mobileAnimation from "../assets/Mobile.json"; // replace with your Lottie file
+import { CheckCircle } from "lucide-react"; // icon library
+import mobileAnimation from "../assets/Mobile.json";
+
+const features = [
+  {
+    title: "Unique Digital Profile",
+    desc: "Your personalized online profile with all your details in one place."
+  },
+  {
+    title: "Single Tap/Scan, Multiple Options",
+    desc: "Share contact info, website, social media, or portfolio instantly."
+  },
+  {
+    title: "Receive Payment",
+    desc: "Just add your UPI ID and change it anytime."
+  },
+  {
+    title: "Get Analytical Report",
+    desc: "Track views, clicks, and capture location."
+  },
+  {
+    title: "Capture Leads & Inquiries",
+    desc: "Collect customer details on the spot."
+  },
+  {
+    title: "Easy Dashboard Access",
+    desc: "Update your details anytime, anywhere."
+  },
+  {
+    title: "No Reprints Required",
+    desc: "Save costs and the environment with digital updates."
+  }
+];
 
 const MobileSection = () => {
   return (
-    <section className="w-full  bg-white flex items-center px-4 py-8 ">
+    <section className="w-full bg-white flex items-center px-4 py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left Column: Lottie Animation */}
-        <div className="flex justify-center">
-          <div className="w-100 md:w-100">
+        
+        {/* Left: Animation */}
+        <div className="flex justify-center" data-aos="fade-up">
+          <div className="w-full max-w-md">
             <Lottie animationData={mobileAnimation} loop={true} />
           </div>
         </div>
 
-        {/* Right Column: Text Content */}
-        <div className="text-gray-900 text-center md:text-left space-y-6">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Smart. Simple. Seamless.
+        {/* Right: Features */}
+        <div className="space-y-6" data-aos="fade-up" data-aos-delay="200">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#090040]">
+            Our Salient Features
           </h2>
-          <p className="text-lg md:text-xl text-gray-700">
-            Experience the future of smart connectivity with{" "}
-            <span className="text-[#090040] font-semibold">FastScan</span>.  
-            Effortlessly share information with just a tap, thanks to our NFC-enabled
-            smart standees and keychains — bridging the gap between digital and real-world interactions.
-          </p>
-          <button className="mt-4 bg-[#090040] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#1a73e8] transition">
-            Learn More
-          </button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div 
+                key={index} 
+                className="flex items-start p-4 rounded-xl bg-gray-50 shadow-md hover:shadow-lg transition"
+              >
+                <CheckCircle className="text-[#090040] w-6 h-6 flex-shrink-0 mt-1" />
+                <div className="ml-3">
+                  <h3 className="font-semibold text-lg">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">{feature.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

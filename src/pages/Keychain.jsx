@@ -54,10 +54,10 @@ const Keychain = () => {
     {/* Left Content */}
     <div className="space-y-6 text-center md:text-left order-2 md:order-1">
       <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
-        NFC Keychains <br /> For Smarter Connectivity
+        Smart Keychains <br /> For Smarter Connectivity
       </h1>
       <p className="text-lg md:text-xl text-gray-300">
-        Carry your digital identity with you. Our NFC-enabled keychains make
+        Carry your digital identity with you. Our Smart-enabled keychains make
         sharing contact details, websites, or files seamless with just a tap.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -80,7 +80,7 @@ const Keychain = () => {
     <div className="flex justify-center order-1 md:order-2">
       <img
         src={keychainImg}
-        alt="NFC Keychain"
+        alt="Smart Keychain"
         className="w-full max-w-xs sm:max-w-sm md:max-w-md drop-shadow-2xl"
       />
     </div>
@@ -100,9 +100,9 @@ const Keychain = () => {
             className="rounded-xl w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto"
           />
           <div>
-            <h2 className="text-3xl font-bold mb-6">Why Choose NFC Keychains?</h2>
+            <h2 className="text-3xl font-bold mb-6">Why Choose Smart Keychains?</h2>
             <p className="text-gray-300 mb-6">
-              Our NFC-enabled keychains are not just practical accessories; they serve as digital tools to
+              Our Smart-enabled keychains are not just practical accessories; they serve as digital tools to
               simplify how you share information.
             </p>
             <ul className="space-y-4">
@@ -125,7 +125,7 @@ const Keychain = () => {
       {/* ===== FEATURES SECTION ===== */}
       <section className="bg-white py-20 px-6">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#090040]">
-          Key Features of NFC Keychains
+          Key Features of Smart Keychains
         </h2>
         <div className="max-w-7xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
@@ -166,10 +166,10 @@ const Keychain = () => {
         style={{ backgroundImage: "linear-gradient(to right, #000 0%, #090040 90%)" }}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready to Get Your NFC Keychain?
+          Ready to Get Your Smart Keychain?
         </h2>
         <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-          Tap into the future of digital sharing. Get your NFC-enabled keychain today!
+          Tap into the future of digital sharing. Get your Smart-enabled keychain today!
         </p>
        <a
   href="tel:+917240009996"

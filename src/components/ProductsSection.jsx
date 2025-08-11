@@ -7,7 +7,7 @@ import KeychainImg from "../assets/keychainp.png";
 const products = [
   {
     id: 1,
-    title: "Smart Standees",
+    title: "NFC Standees",
     shortDescription: "Interactive standees that connect with your smartphone via NFC.",
     image: StandeeImg,
     link: "/products/standees",
@@ -23,7 +23,7 @@ const products = [
   },
   {
     id: 2,
-    title: "NFC Keychains",
+    title: "Smart Keychains",
     shortDescription: "Stylish keychains that store your digital information and connect with NFC-enabled devices.",
     image: KeychainImg,
     link: "/products/keychains",

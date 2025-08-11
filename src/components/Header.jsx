@@ -10,11 +10,16 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import logo from "../assets/logo.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // ✅ Added Link here
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+
+  // Example download link — replace with actual app store link
+  const downloadApp = () => {
+    window.open("https://your-app-download-link.com", "_blank");
+  };
 
   return (
     <header className="fixed w-full z-50 top-0">
@@ -61,21 +66,29 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center">
-              <img src={logo} alt="Logo" className="h-8 w-auto object-contain" />
-            </div>
+          {/* Logo */}
+<div className="flex items-center">
+  <Link to="/"> {/* ✅ Added Link to homepage */}
+    <img
+      src={logo}
+      alt="Logo"
+      className="h-8 w-auto object-contain cursor-pointer"
+    />
+  </Link>
+</div>
+
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8 text-lg text-gray-700 font-medium">
-              <a href="/" className="hover:text-blue-600">Home</a>
-              <a href="#about" className="hover:text-blue-600">About</a>
-              <a href="#products" className="hover:text-blue-600">Products</a>
-              <a href="#contact" className="hover:text-blue-600">Contact</a>
+              <Link to="/products/standees" className="hover:text-blue-600">NFC Standee</Link>
+              <Link to="/products/keychains" className="hover:text-blue-600">Smart Keychain</Link>
+              <Link to="/schedule-demo" className="hover:text-blue-600">Schedule Demo</Link>
+              <Link to="/support" className="hover:text-blue-600">Support</Link>
               <button
-                onClick={() => navigate("/login")}
+                onClick={downloadApp}
                 className="ml-4 px-4 py-1.5 text-sm bg-blue-600 text-white rounded hover:bg-blue-700"
               >
-                Login / Signup
+                Download App
               </button>
             </div>
 
@@ -95,19 +108,35 @@ const Header = () => {
             }`}
           >
             <ul className="flex flex-col gap-4 py-4 text-gray-700 font-medium">
-              <li><a href="/" className="hover:text-blue-600">Home</a></li>
-              <li><a href="#about" className="hover:text-blue-600">About</a></li>
-              <li><a href="#products" className="hover:text-blue-600">Products</a></li>
-              <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+              <li>
+                <Link to="/products/standees" onClick={() => setIsOpen(false)} className="hover:text-blue-600">
+                  NFC Standee
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/keychains" onClick={() => setIsOpen(false)} className="hover:text-blue-600">
+                  Smart Keychain
+                </Link>
+              </li>
+              <li>
+                <Link to="/schedule-demo" onClick={() => setIsOpen(false)} className="hover:text-blue-600">
+                  Schedule Demo
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" onClick={() => setIsOpen(false)} className="hover:text-blue-600">
+                  Support
+                </Link>
+              </li>
               <li>
                 <button
                   onClick={() => {
-                    navigate("/login");
                     setIsOpen(false);
+                    downloadApp();
                   }}
-                  className="text-left hover:text-blue-600"
+                  className="text-left px-4 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700"
                 >
-                  Login / Signup
+                  Download App
                 </button>
               </li>
             </ul>
