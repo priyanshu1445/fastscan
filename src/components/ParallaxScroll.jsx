@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImage from '../assets/parallax.png';
+import backgroundImage from '../assets/parallax.png'; // Adjust the path as necessary
 
 const ParallaxScroll = () => {
   return (

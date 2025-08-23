@@ -8,7 +8,7 @@ import {
   FaQuoteLeft,
 } from "react-icons/fa";
 import standeeImg from "../assets/standeeherop.png";
-import whychooseImg from "../assets/pc2.png";
+import whychooseImg from "../assets/pc3.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 

@@ -30,7 +30,7 @@ const AnimationSection = () => {
           <button className="px-8 py-4 text-lg font-semibold rounded-full shadow-lg bg-gradient-to-r from-[#090040] to-[#1a73e8] text-white hover:shadow-2xl hover:scale-105 transition duration-300">
             Learn More
           </button>
-        </div>
+        </div>  
 
         {/* Right Column: Text & Button */}
   

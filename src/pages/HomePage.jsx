@@ -26,7 +26,7 @@ const HomePage = () => {
       <ParallaxScroll />
 
       <MobileSection />
-      <AnimationSection />
+      <AnimationSection />  
 
       <SmartphoneLottieSection />
 

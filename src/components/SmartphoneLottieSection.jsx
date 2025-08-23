@@ -1,6 +1,8 @@
 import React from "react";
 import Lottie from "lottie-react";
 import smartphoneAnimation from "../assets/smartphone.json"; // Replace with your Lottie file path
+import ImageSlider from "../components/ImageSlider";
+// import ImageSlider from "./ImageSlider";
 
 const SmartphoneLottieSection = () => {
   return (
@@ -23,8 +25,8 @@ const SmartphoneLottieSection = () => {
       </p>
 
       {/* Responsive Lottie Animation */}
-      <div className="w-[300px] sm:w-[350px] md:w-[500px] lg:w-[700px]">
-        <Lottie animationData={smartphoneAnimation} loop={true} />
+      <div className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl my-8">
+       <ImageSlider/>
       </div>
     </section>
   );

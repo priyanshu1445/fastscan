@@ -7,7 +7,7 @@ import {
   FaQuoteLeft,
 } from "react-icons/fa";
 import keychainImg from "../assets/keychainp.png";
-import keychainAboutImg from "../assets/5.png";
+import keychainAboutImg from "../assets/keychain-features.png";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
